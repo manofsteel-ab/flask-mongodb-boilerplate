@@ -8,8 +8,6 @@ class DevelopmentConfig(Config):
     """
     DEBUG = True
     TESTING = True
-    MONGO_HOST_URI = pymongo.MongoClient("mongodb://root:root@mongo")
-    MONGO_DB = MONGO_HOST_URI.xxx
 
     # Config for MongoEngine
     MONGODB_SETTINGS = {
