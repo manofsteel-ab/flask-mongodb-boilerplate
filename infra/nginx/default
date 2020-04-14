@@ -1,0 +1,14 @@
+server {
+  listen 80;
+  gzip off;
+  gzip_vary off;
+
+  location / {
+    gzip off;
+    gzip_vary off;
+    include uwsgi_params;
+    uwsgi_param HTTP_ACCEPT_ENCODING 'deflate';
+    uwsgi_param ACCEPT_ENCODING 'deflate';
+    uwsgi_pass 127.0.0.1:5000;
+  }
+}

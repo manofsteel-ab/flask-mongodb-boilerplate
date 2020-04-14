@@ -1,0 +1,11 @@
+Flask
+Flask-Cors
+Flask-PyMongo
+Flask-RESTful
+pymongo
+requests
+jsonschema
+fab-polish
+flask-mongoengine
+uWSGI
+Werkzeug
