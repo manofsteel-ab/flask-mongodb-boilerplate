@@ -6,8 +6,8 @@ from app.settings.custom_response import DefaultResponse
 sampleBP = Blueprint('sample', __name__, url_prefix='/api/sample')
 
 
-@sampleBP.route('/', methods=['POST'])
+@sampleBP.route('/', methods=['POST', 'GET'])
 def sample():
     return DefaultResponse(
-        {}, 'GeoAreas created successfully', status=HTTPStatus.CREATED
+        {}, 'Success', status=HTTPStatus.CREATED
     )

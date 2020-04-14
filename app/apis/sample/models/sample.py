@@ -17,4 +17,4 @@ class Sample(Base):
 
     @classmethod
     def get_by_name(cls, name):
-        return cls.objects(zone_id=zone_id)
+        return cls.objects(name=name)

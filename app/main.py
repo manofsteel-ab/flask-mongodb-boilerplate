@@ -12,14 +12,14 @@ __all__ = ['create_app']
 def create_app(config=None, app_name=None):
     """Create an app instance based on the passed params"""
     if not config:
-        config = app_config.get('development')
+        config = app_config['development']
     if not app_name:
         app_name = config.APP_NAME
     app = DefaultFlask(app_name)
-    app = configure_app(app, config)
-    app = configure_extensions(app)
-    app = register_blueprints(app)
-    app = configure_error_handlers(app)
+    configure_app(app, config)
+    configure_extensions(app)
+    register_blueprints(app)
+    configure_error_handlers(app)
     return app
 
 def configure_app(app, config=None):

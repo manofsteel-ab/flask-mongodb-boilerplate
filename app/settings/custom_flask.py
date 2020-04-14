@@ -11,7 +11,8 @@ class DefaultFlask(Flask):
     """Override the Flask class to handle custom JSON Api Responses"""
     def make_response(self, rv):
         """Override Flask().make_response()
-        Check if the type is ApiResult, then return ApiResult().to_response().
+        Check if the type is DefaultResponse,
+        then return DefaultResponse().to_response().
         """
         if isinstance(rv, DefaultResponse):
             return rv.to_response()
