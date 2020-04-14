@@ -9,6 +9,7 @@ from app.settings.custom_response import DefaultResponse
 
 __all__ = ['create_app']
 
+
 def create_app(config=None, app_name=None):
     """Create an app instance based on the passed params"""
     if not config:
@@ -22,9 +23,11 @@ def create_app(config=None, app_name=None):
     configure_error_handlers(app)
     return app
 
+
 def configure_app(app, config=None):
     app.config.from_object(config)
     return app
+
 
 def configure_extensions(app):
     """Configure Extensions"""
@@ -33,12 +36,14 @@ def configure_extensions(app):
     app.json_encoder = MongoJSONEncoder
     app.url_map.converters['objectid'] = ObjectIdConverter
 
+
 def register_blueprints(app):
     """Register blueprints"""
     from app.apis.sample.route import sampleBP
     for bp in [sampleBP]:
         app.register_blueprint(bp)
     return app
+
 
 def configure_error_handlers(app):
     """ Error handler subscribe """

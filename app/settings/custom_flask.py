@@ -18,6 +18,7 @@ class DefaultFlask(Flask):
             return rv.to_response()
         return Flask.make_response(self, rv)
 
+
 class MongoJSONEncoder(JSONEncoder):
     def default(self, o):
         if isinstance(o, (datetime, date)):

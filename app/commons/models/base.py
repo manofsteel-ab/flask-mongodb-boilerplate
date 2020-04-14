@@ -1,14 +1,8 @@
-from bson.objectid import ObjectId
-from decimal import Decimal
-from datetime import datetime
-
 from app.settings.extensions import db
 
 
 class Base(db.Document):
-    meta = {
-        'abstract': True
-    }
+    meta = {'abstract': True}
     deleted = db.BooleanField(
         db_field='isDeleted', required=True, default=False, null=False
     )

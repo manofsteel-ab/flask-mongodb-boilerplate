@@ -2,6 +2,7 @@ class Config:
     """Common configurations"""
     APP_NAME = 'app'
 
+
 class DevelopmentConfig(Config):
     """
     Development configurations
@@ -17,11 +18,13 @@ class DevelopmentConfig(Config):
       'password': 'root',
     }
 
+
 class ProductionConfig(Config):
     """
     Production configurations
     """
     DEBUG = False
+
 
 app_config = {
     'default': Config,

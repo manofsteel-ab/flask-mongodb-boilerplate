@@ -1,5 +1,7 @@
 from app.commons.models.base import Base
 from app.settings.extensions import db
+
+
 class Sample(Base):
     meta = {
         'allow_inheritance': True,
