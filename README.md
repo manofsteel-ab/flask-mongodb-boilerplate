@@ -49,9 +49,14 @@ Now you can access api `http://localhost:5000/`
 Sample link - `http://localhost:5000/api/sample/health/`
 
 
-For production you just need to update configs.py file settings
+### For production you just need to update configs.py file settings
 
 ## Useful links
 http://docs.mongoengine.org/guide/defining-documents.html
 
 https://docs.mongodb.com/manual/mongo/
+
+
+## TODO's
+1. Add TESTING ENV and sample TESTING
+2. Add Documentation link about boilerplate structure
