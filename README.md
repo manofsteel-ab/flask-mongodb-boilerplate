@@ -16,8 +16,11 @@ A boilerplate using flask and mongodb
 
 this will create two container >
 
-`flask-mongodb-boilerplate_web_1` - app container
-`flask-mongodb-boilerplate_mongo_1` - mongodb container
+1. app container
+`flask-mongodb-boilerplate_web_1`
+
+2. mongodb container
+`flask-mongodb-boilerplate_mongo_1` 
 
 if you check the docker-compose file you will see, that I have mentioned
 MONGO_INITDB_ROOT_USERNAME, MONGO_INITDB_ROOT_PASSWORD.
