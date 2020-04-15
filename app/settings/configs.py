@@ -1,3 +1,4 @@
+import pymongo
 class Config:
     """Common configurations"""
     APP_NAME = 'app'
@@ -9,13 +10,12 @@ class DevelopmentConfig(Config):
     """
     DEBUG = True
     TESTING = True
-
     # Config for MongoEngine
     MONGODB_SETTINGS = {
       'db': 'sample',
       'host': 'mongo',
-      'username': 'root',
-      'password': 'root',
+      'username': 'sample',
+      'password': 'sample',
     }
 
 
