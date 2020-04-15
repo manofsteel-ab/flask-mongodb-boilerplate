@@ -20,10 +20,9 @@ this will create two container >
 `flask-mongodb-boilerplate_web_1`
 
 2. mongodb container
-`flask-mongodb-boilerplate_mongo_1` 
+`flask-mongodb-boilerplate_mongo_1`
 
-if you check the docker-compose file you will see, that I have mentioned
-MONGO_INITDB_ROOT_USERNAME, MONGO_INITDB_ROOT_PASSWORD.
+If you check the docker-compose file you will see, that I have mentioned MONGO_INITDB_ROOT_USERNAME, MONGO_INITDB_ROOT_PASSWORD.
 So this is a username and password for admin(default) database.
 Now you have to create a new database for your application.
 For example in this boilerplate I am using `sample` database.
@@ -45,12 +44,12 @@ Now follow these steps to create user for sample database(ex.sample)(You have to
 Now update app/settings/configs.py file and update MONGODB_SETTINGS with your new db, username and password
 
 
-## For production you just need to update configs.py file settings
-
 Now you can access api `http://localhost:5000/`
 
 Sample link - `http://localhost:5000/api/sample/health/`
 
+
+For production you just need to update configs.py file settings
 
 ## Useful links
 http://docs.mongoengine.org/guide/defining-documents.html
