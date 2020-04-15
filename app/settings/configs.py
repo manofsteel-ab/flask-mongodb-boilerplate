@@ -1,4 +1,3 @@
-import pymongo
 class Config:
     """Common configurations"""
     APP_NAME = 'app'

@@ -39,8 +39,7 @@ class Base(db.Document):
 
     def update(self, *args, **kwargs):
         self.assign_attributes(kwargs)
-        if save:
-            self.save()
+        self.save()
         return self
 
     def assign_attributes(self, data):

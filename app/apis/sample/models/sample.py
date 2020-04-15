@@ -1,5 +1,3 @@
-from mongoengine import *
-
 from app.commons.models.base import Base
 from app.settings.extensions import db
 

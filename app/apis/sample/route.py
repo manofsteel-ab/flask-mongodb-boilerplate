@@ -14,6 +14,7 @@ def sample():
         {}, 'Success', status=HTTPStatus.OK
     )
 
+
 @sampleBP.route('/dump/', methods=['POST'])
 def sample_dump():
     data = request.json
@@ -22,13 +23,13 @@ def sample_dump():
         {}, 'Success', status=HTTPStatus.CREATED
     )
 
+
 @sampleBP.route('/list/', methods=['GET'])
 def sample_list():
     obj_list = SampleManager().get_list()
-    print(obj_list)
     return DefaultResponse(
         data={
-            'list':[val.to_dict() for val in obj_list]
+            'list': [val.to_dict() for val in obj_list]
         },
         message='Success', status=HTTPStatus.CREATED
     )
