@@ -5,7 +5,6 @@ from app.settings.extensions import db
 
 
 class Sample(Base):
-    meta = {'collection': 'sample'}
     name = db.StringField(db_field='name', required=True, null=False)
     type = db.StringField(
         db_field='type', choices=[

@@ -14,6 +14,7 @@ class DevelopmentConfig(Config):
     MONGODB_SETTINGS = {
       'db': 'sample',
       'host': 'mongo',
+      'port': 27017,
       'username': 'sample',
       'password': 'sample',
     }

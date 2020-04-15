@@ -1,6 +1,9 @@
+from bson.objectid import ObjectId
 from datetime import datetime
+from decimal import Decimal
 
 from app.settings.extensions import db
+from app.commons.utils.helper import convert_iso_to_utc
 
 
 class Base(db.Document):
@@ -29,13 +32,9 @@ class Base(db.Document):
 
     @classmethod
     def add(cls, *args, **kwargs):
-        print(db)
         obj = cls()
         obj.assign_attributes(kwargs)
-        print(kwargs.items())
-        if kwargs.get('save'):
-            print(234234)
-            obj.save()
+        obj.save()
         return obj
 
     def update(self, *args, **kwargs):
@@ -51,7 +50,7 @@ class Base(db.Document):
                     setattr(self, col_name, data[col_name])
         return self
 
-    def to_json(self):
+    def to_dict(self):
         response = {}
         for field_name in self:
             value = getattr(self, field_name)

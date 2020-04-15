@@ -9,6 +9,4 @@ class SampleManager:
         return self.Sample.add(**sample_data_attributes)
 
     def get_list(self):
-        print(self.Sample.objects)
-        for sample in self.Sample.objects:
-            print (sample.name)
+        return self.Sample.objects

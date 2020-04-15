@@ -24,7 +24,11 @@ def sample_dump():
 
 @sampleBP.route('/list/', methods=['GET'])
 def sample_list():
-    SampleManager().get_list()
+    obj_list = SampleManager().get_list()
+    print(obj_list)
     return DefaultResponse(
-        {}, 'Success', status=HTTPStatus.CREATED
+        data={
+            'list':[val.to_dict() for val in obj_list]
+        },
+        message='Success', status=HTTPStatus.CREATED
     )
