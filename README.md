@@ -49,6 +49,11 @@ Now you can access api `http://localhost:5000/`
 Sample link - `http://localhost:5000/api/sample/health/`
 
 
+## TESTING
+Write your test cases then run
+
+pytest tests/  --capture=tee-sys
+
 ### For production you just need to update configs.py file settings
 
 ## Useful links

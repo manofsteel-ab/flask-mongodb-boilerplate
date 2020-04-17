@@ -15,7 +15,7 @@ class DevelopmentConfig(Config):
       'db': 'sample',
       'host': 'mongo',
       'port': 27017,
-      'username': 'sample',
+      'username': 'samples',
       'password': 'sample',
     }
 

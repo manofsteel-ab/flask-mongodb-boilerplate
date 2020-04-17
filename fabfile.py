@@ -14,6 +14,6 @@ def find_pyflakes_violations():
     info('Running coding standards check for python files...')
     return local(
         "git ls-files -z | "
-        "grep -PZz '\.py$' | "  # noqa
+        "grep -PZz '\.py$' | "
         "xargs -0 pycodestyle"
     )
