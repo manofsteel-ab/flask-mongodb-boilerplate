@@ -35,6 +35,7 @@ class ProductionConfig(Config):
       'password': 'Your prod database password',
     }
 
+
 class TestConfig(Config):
     MONGODB_SETTINGS = {
         'db': 'testdb',

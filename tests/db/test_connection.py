@@ -1,7 +1,10 @@
-from flask_mongoengine import *
+import unittest
 
-def test_connection():
-    """
-      Test that aur flask_mongoengine(mapper) is connected to mongo
-    """
-    assert 1 == 1
+
+class TestDB(unittest.TestCase):
+
+    def test_close(self):
+        self.assertTrue(True)
+
+    def test_open(self):
+        self.assertTrue(True)
