@@ -2,7 +2,7 @@
 A boilerplate using flask and mongodb
 
 ## Prerequisites
-1) Understanding of flask
+1) Understanding of flask, uWSGI
 2) Understanding of docker
 3) Understanding of mongodb
 4) Understanding of flask-mongoengine (A document mapper library)

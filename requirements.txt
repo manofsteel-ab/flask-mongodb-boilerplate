@@ -6,3 +6,4 @@ flask-mongoengine
 uWSGI
 Werkzeug
 isodate
+pytest
